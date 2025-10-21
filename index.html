@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marko+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Hacker Escape Rooms</title>
@@ -14,7 +19,11 @@
     <header>
         <div class="header__logo">
             <img src="img/logo.png" alt="[Esc] Hacker Escape Rooms">
-            <h1>Hacker Escape Rooms</h1>
+            <h1 class="header__title">
+                <span>Hacker</span>
+                <span>Escape</span>
+                <span>Rooms</span>
+            </h1>
         </div>
         <nav class="header__menu">
             <ul>
@@ -27,8 +36,11 @@
         <div class="header__hero">
             <img src="img/hacker.png" alt="A hacker sittning in front of a computer">
         </div>
-        <a class="cta cta--red" href="#">Online challenges</a>
-        <a class="cta cta--blue" href="#">On-site challenges</a>
+        <div class="cta__header">
+            <a class="cta cta--blue" href="#">On-site challenges</a>
+            <a class="cta--red-first" href="#">Online challenges</a>
+        </div>
+
     </header>
 
     <main>

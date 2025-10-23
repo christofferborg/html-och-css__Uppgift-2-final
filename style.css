@@ -153,7 +153,7 @@ html {
     max-height: 15px;
 }
 
-.challenges__stars-img {
+.challenges__stars img {
     height: 15px;
     width: auto;
 }
@@ -215,7 +215,7 @@ html {
     font-weight: bold;
     color: #8ACFE5;
     border: 2px solid #8ACFE5;
-    margin: 1rem 5rem 6rem 5rem;
+    margin: 1rem 3rem 6rem 3rem;
 }
 
 .friends {
@@ -226,6 +226,7 @@ html {
 
 .friends__img-box {
     width: 100%;
+    flex: 1;
 }
 
 .friends__img {
@@ -241,6 +242,7 @@ html {
 .friends__text {
     font-size: 1.5rem;
     margin: 2rem 1rem 4rem 1rem;
+    flex: 1;
 }
 
 .friends__cta-box {

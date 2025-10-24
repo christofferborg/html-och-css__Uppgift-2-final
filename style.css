@@ -551,6 +551,7 @@ html {
         display: flex;
         flex-direction: row;
         padding: 7rem 1rem 10rem 1rem;
+        margin-top: 12rem;
     }
 
     .footer__text-box {

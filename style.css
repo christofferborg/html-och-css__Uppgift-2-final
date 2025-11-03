@@ -33,6 +33,10 @@ html {
     display: none;
 }
 
+.header__menu-mobile {
+    
+}
+
 .header__hero {
     max-height: 250px;
     width: 100%;

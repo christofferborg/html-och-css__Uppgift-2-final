@@ -33,8 +33,104 @@ html {
     display: none;
 }
 
-.header__menu-mobile {
-    
+.menuIcon {
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    width: 55px;
+    height: 6px;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 6px;
+    background-color: white;
+    left: 0;
+    border-radius: 3px;
+}
+
+.menuIcon::before {
+    top: -13px;
+}
+
+.menuIcon::after {
+    top: 13px;
+}
+
+
+#menuCheckbox~ul {
+    display: none;
+}
+
+#menuCheckbox:checked~ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 1rem;
+    background-color: #011827;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.header__mobile--menu-link {
+    flex-direction: column;
+    gap: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.header__mobile--list {
+
+    list-style: none;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    background-image: url(img/close.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+#menuCheckbox:checked~ul .closeIcon {
+    display: block;
+}
+
+body.menu-open .header__logo,
+body.menu-open .header__hero,
+body.menu-open .header__cta,
+body.menu-open .main {
+  opacity: 0.5;
+}
+
+body.menu-open .header__logo-img, 
+body.menu-open .header__title, 
+body.menu-open .menuIcon, 
+body.menu-open .menuIcon::before,
+body.menu-open .menuIcon::after {
+    opacity: 0;
 }
 
 .header__hero {
@@ -363,6 +459,15 @@ html {
         margin: 1rem 0;
     }
 
+    .menuIcon {
+        display: none;
+    }
+
+    .menuIcon::before,
+    .menuIcon::after {
+        display: none;
+    }
+
     .header__menu {
         display: flex;
         flex-direction: row;
@@ -523,7 +628,7 @@ html {
         padding: 5rem;
     }
 
-     .online {
+    .online {
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -536,17 +641,19 @@ html {
     }
 
     .online__text-box {
-       grid-area: onlineText;
-       padding: 5rem;
+        grid-area: onlineText;
+        padding: 5rem;
     }
 
-    .friends__img, .online__img {
+    .friends__img,
+    .online__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .friends__cta, .online__cta {
+    .friends__cta,
+    .online__cta {
         font-size: clamp(1rem, 1.5vw + 0.3rem, 1.5rem);
         padding: clamp(1rem, 1.5vw + 0.3rem, 1.5rem);
     }

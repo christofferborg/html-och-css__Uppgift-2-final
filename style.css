@@ -33,43 +33,40 @@ html {
     display: none;
 }
 
-.menuIcon {
+.header__menuIcon {
     position: absolute;
     top: 2.5rem;
-    right: 2rem;
-    width: 55px;
-    height: 6px;
+    right: 1.5rem;
+    width: 45px;
+    height: 5px;
     background-color: white;
     display: inline-block;
     cursor: pointer;
     border-radius: 3px;
+    border: none;
+    padding: 0;
 }
 
-.menuIcon::before,
-.menuIcon::after {
+.header__menuIcon::before,
+.header__menuIcon::after {
     content: "";
     position: absolute;
-    width: 55px;
-    height: 6px;
+    width: 45px;
+    height: 5px;
     background-color: white;
     left: 0;
     border-radius: 3px;
 }
 
-.menuIcon::before {
-    top: -13px;
+.header__menuIcon::before {
+    top: -11px;
 }
 
-.menuIcon::after {
-    top: 13px;
+.header__menuIcon::after {
+    top: 11px;
 }
 
-
-#menuCheckbox~ul {
-    display: none;
-}
-
-#menuCheckbox:checked~ul {
+.header__mobile-menu {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -78,7 +75,17 @@ html {
     z-index: 1;
     justify-content: center;
     align-items: center;
-    gap: 3.5rem;
+    gap: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.header__mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.2s ease-in-out 0.2s;
 }
 
 .header__mobile--menu-link {
@@ -86,51 +93,56 @@ html {
     gap: 0;
     text-decoration: none;
     color: white;
-    font-size: 2.3rem;
+    font-size: 1.9rem;
     font-weight: 500;
     list-style: none;
 }
 
 .header__mobile--list {
-
     list-style: none;
 }
 
-#menuCheckbox {
-    display: none;
-}
-
-.closeIcon {
+.header__closeIcon {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 40px;
-    height: 40px;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 35px;
+    height: 35px;
     background-image: url(img/close.png);
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 2;
-    display: none;
-}
-
-#menuCheckbox:checked~ul .closeIcon {
-    display: block;
-}
-
-body.menu-open .header__logo,
-body.menu-open .header__hero,
-body.menu-open .header__cta,
-body.menu-open .main {
-  opacity: 0.5;
-}
-
-body.menu-open .header__logo-img, 
-body.menu-open .header__title, 
-body.menu-open .menuIcon, 
-body.menu-open .menuIcon::before,
-body.menu-open .menuIcon::after {
+    border: none;
+    background-color: transparent;
+    visibility: hidden;
     opacity: 0;
+}
+
+.header__closeIcon.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+.menu-open .header__logo,
+.menu-open .header__hero,
+.menu-open .header__cta,
+.menu-open .main {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+}
+
+.menu-open .header__logo-img,
+.menu-open .header__title,
+.menu-open .header__menuIcon,
+.menu-open .header__menuIcon::before,
+.menu-open .header__menuIcon::after {
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .header__hero {

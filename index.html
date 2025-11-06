@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Marko+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>Hacker Escape Rooms</title>
 </head>
@@ -25,19 +26,19 @@
                     <span class="header__title-span">Escape</span>
                     <span class="header__title-span">Rooms</span>
                 </h1>
-                </div>
-                <nav>
-                    <label for="menuCheckbox" class="menuIcon"></label>
-                    <input type="checkbox" id="menuCheckbox">
-                    <ul>
-                        <label for="menuCheckbox" class="closeIcon"></label>
+            </div>
+            <nav>
+                <button type="button" class="header__menuIcon"></button>
+
+                <ul class="header__mobile-menu">
+                    <button type="button" class="header__closeIcon"></button>
                     <li class="header__mobile--list"><a class="header__mobile--menu-link" href="#">Play online</a></li>
                     <li class="header__mobile--list"><a class="header__mobile--menu-link" href="#">Play on-site</a></li>
                     <li class="header__mobile--list"><a class="header__mobile--menu-link" href="#">The story</a></li>
                     <li class="header__mobile--list"><a class="header__mobile--menu-link" href="#">Contact us</a></li>
                 </ul>
-                </nav>
-            
+            </nav>
+
             <nav>
                 <ul class="header__menu">
                     <li><a class="header__menu-link" href="#">Play online</a></li>
@@ -147,9 +148,9 @@
                 </div>
             </div>
             <div class="header__cta">
-            <a class="header__cta-blue" href="#">On-site challenges</a>
-            <a class="header__cta-red" href="#">Online challenges</a>
-        </div>
+                <a class="header__cta-blue" href="#">On-site challenges</a>
+                <a class="header__cta-red" href="#">Online challenges</a>
+            </div>
         </section>
 
         <section>
